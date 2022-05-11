@@ -11,6 +11,7 @@
 		28DCAE29282C3B39006A4CBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DCAE28282C3B39006A4CBE /* ContentView.swift */; };
 		28DCAE2B282C3B3B006A4CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28DCAE2A282C3B3B006A4CBE /* Assets.xcassets */; };
 		28DCAE2E282C3B3B006A4CBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28DCAE2D282C3B3B006A4CBE /* Preview Assets.xcassets */; };
+		28DCAE35282C3B7E006A4CBE /* ColorCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DCAE34282C3B7E006A4CBE /* ColorCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		28DCAE28282C3B39006A4CBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		28DCAE2A282C3B3B006A4CBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28DCAE2D282C3B3B006A4CBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		28DCAE34282C3B7E006A4CBE /* ColorCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				28DCAE26282C3B39006A4CBE /* TrafficLightWithSwiftUIApp.swift */,
 				28DCAE28282C3B39006A4CBE /* ContentView.swift */,
+				28DCAE34282C3B7E006A4CBE /* ColorCircleView.swift */,
 				28DCAE2A282C3B3B006A4CBE /* Assets.xcassets */,
 				28DCAE2C282C3B3B006A4CBE /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				28DCAE29282C3B39006A4CBE /* ContentView.swift in Sources */,
 				28DCAE27282C3B39006A4CBE /* TrafficLightWithSwiftUIApp.swift in Sources */,
+				28DCAE35282C3B7E006A4CBE /* ColorCircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
