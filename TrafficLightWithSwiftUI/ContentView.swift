@@ -7,33 +7,53 @@
 
 import SwiftUI
 
+enum CurrentLight {
+    case red, yellow, green
+}
+
 struct ContentView: View {
+    
+    @State private var currentLight = CurrentLight.red
+    @State private var buttonTitle = "START"
+    
+    private let size: CGFloat = 120
+    private let lightOn: Double = 1
+    private let lightOff: Double = 0.5
+    
     var body: some View {
-        
-        let size: CGFloat = 120
-        
         ZStack {
             Color(.gray)
                 .ignoresSafeArea()
             VStack {
                 VStack {
-                    ColorCircleView(color: .red, size: size, alpha: 1)
-                    ColorCircleView(color: .orange, size: size, alpha: 1)
-                    ColorCircleView(color: .green, size: size, alpha: 1)
+                    ColorCircleView(color: .red, size: size, opacity: currentLight == .red ? lightOn : lightOff)
+                    ColorCircleView(color: .yellow, size: size, opacity: currentLight == .yellow ? lightOn : lightOff)
+                    ColorCircleView(color: .green, size: size, opacity: currentLight == .green ? lightOn : lightOff)
                 }
-                .lineSpacing(20)
                 Spacer()
-                Button(action: {}) {
-                    Text("START")
-                        .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15))
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .font(.largeTitle)
-                        }
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 2))
+                ChangeLightButtonView(title: buttonTitle) {
+                    if buttonTitle == "START" {
+                        buttonTitle = "NEXT"
+                    }
+                    changeLight()
+                }
             }
-            .padding(EdgeInsets(top: 40, leading: 0, bottom: 20, trailing: 0))
+            .padding(EdgeInsets(top: 60, leading: 0, bottom: 60, trailing: 0))
+        }
+    }
+}
+
+// MARK: - Methods
+extension ContentView {
+    
+    private func changeLight() {
+        switch currentLight {
+        case .red:
+            currentLight = .yellow
+        case .yellow:
+            currentLight = .green
+        case .green:
+            currentLight = .red
         }
     }
 }

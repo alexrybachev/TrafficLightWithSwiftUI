@@ -11,11 +11,11 @@ struct ColorCircleView: View {
     
     let color: Color
     let size: CGFloat
-    let alpha: Double
+    let opacity: Double
     
     var body: some View {
         Circle()
-            .foregroundColor(color.opacity(alpha))
+            .foregroundColor(color.opacity(opacity))
             .frame(width: size, height: size)
             .overlay(Circle().stroke(Color.black, lineWidth: 2 ))
     }
@@ -23,6 +23,6 @@ struct ColorCircleView: View {
 
 struct ColorCircle_Previews: PreviewProvider {
     static var previews: some View {
-        ColorCircleView(color: .red, size: 250, alpha: 0.5)
+        ColorCircleView(color: .red, size: 250, opacity: 0.5)
     }
 }
