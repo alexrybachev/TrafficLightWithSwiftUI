@@ -25,17 +25,17 @@ struct ContentView: View {
             Color(.gray)
                 .ignoresSafeArea()
             VStack {
-                VStack {
-                    ColorCircleView(color: .red,
-                                    size: size,
-                                    opacity: currentLight == .red ? lightOn : lightOff)
-                    ColorCircleView(color: .yellow,
-                                    size: size,
-                                    opacity: currentLight == .yellow ? lightOn : lightOff)
-                    ColorCircleView(color: .green,
-                                    size: size,
-                                    opacity: currentLight == .green ? lightOn : lightOff)
-                }
+                
+                ColorCircleView(color: .red,
+                                size: size,
+                                opacity: currentLight == .red ? lightOn : lightOff)
+                ColorCircleView(color: .yellow,
+                                size: size,
+                                opacity: currentLight == .yellow ? lightOn : lightOff)
+                ColorCircleView(color: .green,
+                                size: size,
+                                opacity: currentLight == .green ? lightOn : lightOff)
+                
                 Spacer()
                 ChangeLightButtonView(title: buttonTitle) {
                     if buttonTitle == "START" {
